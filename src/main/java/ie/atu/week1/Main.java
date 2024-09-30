@@ -22,7 +22,7 @@ public class Main {
         switch(operation){
             case "add": add(first, second); break;
             case "subtract": subtract(first, second); break;
-
+            case "multiply": multiplication(first, second); break;
         }
 
     }
@@ -32,6 +32,10 @@ public class Main {
     }
     public static void subtract (double first, double second){
         double result = first - second;
+        System.out.println("The result is: " +result);
+    }
+    public static void multiplication (double first, double second){
+        double result = first * second;
         System.out.println("The result is: " +result);
     }
 }
