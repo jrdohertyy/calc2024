@@ -9,16 +9,31 @@ public class Main {
         Scanner scan1 = new Scanner(System.in);
 
         System.out.println("Please enter first number: ");
-        double firstNum = scan1.nextDouble();
+        double first = scan1.nextDouble();
 
         System.out.println("Please enter first number: ");
-        double secondNum = scan1.nextDouble();
+        double second = scan1.nextDouble();
 
-        double result = firstNum + secondNum;
+        System.out.println("Choose an operation (add, subtract, multiply, divide");
+        String operation = scan1.next();
 
-        System.out.println("The result is " +result);
+        boolean validOperation = true;
+        double result = 0;
+        switch(operation){
+            case "add": add(first, second); break;
+            case "subtract": subtract(first, second); break;
+
+        }
 
     }
-
-
+    public static void add (double first, double second){
+        double result = first + second;
+        System.out.println("The result is: " +result);
+    }
+    public static void subtract (double first, double second){
+        double result = first - second;
+        System.out.println("The result is: " +result);
+    }
 }
+
+
