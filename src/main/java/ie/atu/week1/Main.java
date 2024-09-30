@@ -23,6 +23,7 @@ public class Main {
             case "add": add(first, second); break;
             case "subtract": subtract(first, second); break;
             case "multiply": multiplication(first, second); break;
+            case "divide" : divide(first, second); break;
         }
 
     }
@@ -36,6 +37,10 @@ public class Main {
     }
     public static void multiplication (double first, double second){
         double result = first * second;
+        System.out.println("The result is: " +result);
+    }
+    public static void divide (double first, double second){
+        double result = first / second;
         System.out.println("The result is: " +result);
     }
 }
