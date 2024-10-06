@@ -14,7 +14,7 @@ public class Main {
         System.out.println("Please enter first number: ");
         double second = scan1.nextDouble();
 
-        System.out.println("Choose an operation (add, subtract, multiply, divide");
+        System.out.println("Choose an operation (add, subtract, multiply, divide, exponential)");
         String operation = scan1.next();
 
         boolean validOperation = true;
@@ -24,6 +24,7 @@ public class Main {
             case "subtract": subtract(first, second); break;
             case "multiply": multiplication(first, second); break;
             case "divide" : divide(first, second); break;
+            case "exponential": exponential(first, second); break;
         }
 
     }
@@ -42,6 +43,10 @@ public class Main {
     public static void divide (double first, double second){
         double result = first / second;
         System.out.println("The result is: " +result);
+    }
+    public static void exponential (double base, double exponent){
+        double result = Math.pow(base, exponent);
+        System.out.println(base + " raised to the power of " + exponent + " is: " + result);
     }
 }
 
